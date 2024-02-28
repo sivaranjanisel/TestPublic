@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">  
+<suite name="TestBefore1">
+	<parameter name ="a"  value="10"></parameter>
+	<parameter name = "b" value ="9"></parameter>
+	<parameter name="ab" value="20"></parameter>
+	<parameter name="bc" value="5"></parameter>
+	<test name="TestBefore">
+		<classes>
+			<class name="Test123.TestBefore" />
+			
+		</classes>
+	</test>
+	<test name="TestBefore9">
+		<classes>
+			<class name="Test123.ParameterTest" />
+		</classes>
+	</test>
+</suite>
