@@ -28,7 +28,7 @@ public class TestScreen {
 	    }
 	    @AfterMethod(alwaysRun = true)
 	    public void close(ITestResult testResult) {
-	        d.quit();
+	        d.close();
 	    }
 
 

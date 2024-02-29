@@ -59,7 +59,7 @@ class TestLoginPage extends SetupDriver{
    
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
-	@Description("Login credentials Test")
+	@Description("Login credentials Test pages")
 	@Story("Testcase 1")
    public void TestLoginPage1()throws IOException {		
 		String user_name= rv.readConfigFile("username");
