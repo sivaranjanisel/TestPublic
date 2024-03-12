@@ -1,19 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>  
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">  
-<suite name="TestBefore1">
-	<parameter name ="a"  value="10"></parameter>
-	<parameter name = "b" value ="9"></parameter>
-	<parameter name="ab" value="20"></parameter>
-	<parameter name="bc" value="5"></parameter>
-	<test name="TestBefore">
-		<classes>
-			<class name="Test123.TestBefore" />
-			
-		</classes>
-	</test>
-	<test name="TestBefore9">
-		<classes>
-			<class name="Test123.ParameterTest" />
-		</classes>
-	</test>
-</suite>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="TestLogin.TestScreen"/>
+      <class name="Test123.GooglePage"/>
+      <class name="TestLogin.TestLoginPage"/>
+      <class name="Test123.Testprovider"/>
+      <class name="Test123.ParamaterDataProvider"/>
+      <class name="Test123.Uploadfile"/>
+      <class name="Test123.MainClass"/>
+      <class name="Test123.DragDrop"/>
+      <class name=".NewTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

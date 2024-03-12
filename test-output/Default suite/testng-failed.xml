@@ -5,7 +5,6 @@
     <classes>
       <class name="TestLogin.TestLoginPage">
         <methods>
-          <include name="Test3"/>
           <include name="TestLoginPage1"/>
           <include name="tearDown"/>
           <include name="beforetest"/>

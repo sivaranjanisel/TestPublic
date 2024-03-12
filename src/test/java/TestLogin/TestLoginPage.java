@@ -39,44 +39,30 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.openqa.selenium.support.PageFactory;
 
-
-
 @Epic("Regression Test Suite")
 @Feature("Test the Login page")
-class TestLoginPage extends SetupDriver{
-	
-	WebDriver driver;
+class TestLoginPage extends SetupDriver{	
+	//WebDriver driver;
     Login PageFactory;
     ReadValue rv;
    
     @BeforeSuite
+    
     public void beforetest() {
           TSetupDriver();
           PageFactory = new Login();
           rv= new ReadValue();
       }
-    
-   
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Login credentials Test pages")
 	@Story("Testcase 1")
    public void TestLoginPage1()throws IOException {		
-		String user_name= rv.readConfigFile("username");
+		String user_name= rv.readConfigFile("usernames");
 		String pwdwe= rv.readConfigFile("pwds");
-		PageFactory.LoginPage(user_name,pwdwe);
-		
-  }
-   
-	
-   @Test
-	@Severity(SeverityLevel.MINOR)
-	@Description("Test the assertion 2")
-	@Story("Testcase2 ")
-	
-	public void Test3() {
-		Assert.assertEquals(true, false);	
-	}
+		PageFactory.LoginPage(user_name,pwdwe);	
+  }	
+ 
    @AfterMethod
 	public void tearDown(ITestResult result) throws IOException {
 	    if (result.getStatus() == ITestResult.FAILURE) {
@@ -85,19 +71,13 @@ class TestLoginPage extends SetupDriver{
           Allure.addAttachment("Screenshot on failure", FileUtils.openInputStream(screenshot));
 	    }
 	}
-
-	
 }
-
-
-
 //Testprovider dataprovider;
-
 	/*	@BeforeTest//@Beforesuite
 	 public void beforetest() {// create utility folder
 		driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		}
-		*/
+*/
  
